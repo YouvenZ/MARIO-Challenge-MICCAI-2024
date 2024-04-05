@@ -1,5 +1,7 @@
 # 🕹️ 🍄 MARIO : Monitoring AMD progression in OCT
 
+![](https://github.com/YouvenZ/MARIO-Challenge-MICCAI-2024/blob/main/images/mario_banner_.png)
+
 
 ## Context
 
