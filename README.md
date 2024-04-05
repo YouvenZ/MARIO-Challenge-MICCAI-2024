@@ -11,18 +11,18 @@
 
 The first task focuses on pairs of 2D slices (B-scans) from two consecutive OCT acquisitions. The goal is to classify the evolution between these two slices (before and after), which clinicians typically examine side by side on their screens.
 
-![](https://github.com/YouvenZ/MARIO-Challenge-MICCAI-2024/blob/main/images/mario_task_1.png)
+![](https://github.com/YouvenZ/MARIO-Challenge-MICCAI-2024/blob/main/images/mario_task_1_gray_bg.png)
 
 ### Task 2
 
 The second task focuses on 2D slices level. The goal is to predict the future evolution within 3 months with close monitoring of patients that are enrolled in an anti-VEGF treatments plan. In summary, the first task aims to automate the initial step of the analysis (useful for decision support) and the second task aims to automate the complete analysis process (useful for autonomous AI).
 
-![](https://github.com/YouvenZ/MARIO-Challenge-MICCAI-2024/blob/main/images/mario_task_1.png)
+![](https://github.com/YouvenZ/MARIO-Challenge-MICCAI-2024/blob/main/images/mario_task_2_gray_bg.png)
 
 
 ## Submission instruction
 
-Our challenge use the two stack for the 
+Our challenge use the two stack for the                                                     
 
 For the premilary phase you need to submit your 
 
