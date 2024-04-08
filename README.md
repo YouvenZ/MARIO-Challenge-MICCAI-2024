@@ -5,6 +5,14 @@
 
 ## Context
 
+This is the github page of the MARIO challenge. This page aims to provide guidance of how to publish your solution to grand-challenge.
+
+We provide the following information
+
+- The script we used for the evaluation
+- A docker exemple for the submission for final phase 
+
+---
 
 
 ## Tasks
@@ -24,15 +32,16 @@ The second task focuses on 2D slices level. The goal is to predict the future ev
 
 ## Submission instruction
 
-Our challenge use the two stack for the                                                     
 
-For the premilary phase you need to submit your 
+### How to have acces to the data ?
 
 
-This is the github page of the MARIO challenge. This page aims to provide guidance of how to publish your solution to grand-challenge.
+First fill the following form, fill the form and send it to rachid.zeghlache@univ-brest.fr. Once completed and signed, we will verify the document and within the next 48 working days you will receive the a link to download the dataset. 
 
-We provide the following information
 
-- The script we used for the evaluation
-- A docker exemple for the submission in the final phase 
----
+Our challenge use the two stack (.csv submission and algorithm submission)                                                     
+
+For the premilary phase you need to submit your .csv prediction of the validation set
+
+
+
