@@ -3,6 +3,8 @@
 ![](https://github.com/YouvenZ/MARIO-Challenge-MICCAI-2024/blob/main/images/mario_banner_.png)
 
 
+[Challenge website](https://mario.grand-challenge.org/Challenge_overview/)
+
 ## Context
 
 This is the github page of the MARIO challenge. This page aims to provide guidance of how to publish your solution to grand-challenge.
