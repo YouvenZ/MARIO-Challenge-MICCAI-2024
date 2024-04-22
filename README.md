@@ -7,7 +7,7 @@
 
 ## Context
 
-This is the github page of the MARIO challenge. This page aims to provide guidance of how to publish your solution to grand-challenge.
+This is the github page of the MARIO challenge. This page aims to provide guidance of how to publish your solution to codabench.
 
 We provide the following information
 
