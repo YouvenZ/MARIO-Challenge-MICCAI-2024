@@ -41,7 +41,7 @@ The second task focuses on 2D slices level. The goal is to predict the future ev
 ### How to have acces to the data ?
 
 
-First fill the following [form](https://github.com/YouvenZ/MARIO-Challenge-MICCAI-2024/blob/main/MARIO%202024%20Data%20Challenge%20Participation%20Form.pdf), fill the form and send it to rachid.zeghlache@univ-brest.fr. Once completed and signed, we will verify the document and within the next 48 working days you will receive the a link to download the dataset. 
+First fill the following [form](https://github.com/YouvenZ/MARIO-Challenge-MICCAI-2024/blob/main/MARIO%202024%20Data%20Challenge%20Participation%20Form.pdf), fill the form and send it to rachid.zeghlache@univ-brest.fr. Once completed and signed, we will verify the document and within the next 48 working hours you will receive the a link to download the dataset. 
 
 
 Our challenge use the two stack (.csv submission and algorithm submission)                                                     
