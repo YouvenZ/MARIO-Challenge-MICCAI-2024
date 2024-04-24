@@ -34,6 +34,9 @@ The second task focuses on 2D slices level. The goal is to predict the future ev
 
 ## Submission instruction
 
+### How to register to the challenges
+
+![](https://github.com/YouvenZ/MARIO-Challenge-MICCAI-2024/blob/main/images/tuto_register.png)
 
 ### How to have acces to the data ?
 
