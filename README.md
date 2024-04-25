@@ -3,7 +3,7 @@
 ![](https://github.com/YouvenZ/MARIO-Challenge-MICCAI-2024/blob/main/images/mario_banner_.png)
 
 
-[Challenge website](https://mario.grand-challenge.org/Challenge_overview/)
+[Challenge website](https://youvenz.github.io/MARIO_challenge.github.io/)
 
 ## Context
 
