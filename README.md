@@ -40,13 +40,18 @@ The second task focuses on 2D slices level. The goal is to predict the future ev
 
 ### How to have acces to the data ?
 
+First if you do not have a CodaBench account yet, create one [here](https://www.codabench.org/accounts/signup): 
 
-First fill the following [form](https://github.com/YouvenZ/MARIO-Challenge-MICCAI-2024/blob/main/MARIO%202024%20Data%20Challenge%20Participation%20Form.pdf), fill the form and send it to rachid.zeghlache@univ-brest.fr. Once completed and signed, we will verify the document and within the next 48 working hours you will receive the a link to download the dataset. 
+Second fill the following [form](https://github.com/YouvenZ/MARIO-Challenge-MICCAI-2024/blob/main/MARIO%202024%20Data%20Challenge%20Participation%20Form.pdf), fill the form and send it to rachid.zeghlache@univ-brest.fr. Also please make sure to add "MARIO 2024 Challenge" in the subject of your mail in order to faciliate the. Finally add the your Team name for naming form (i.e  MARIO 2024 Data Challenge Participation Form_team_name.pdf). Once completed and signed, we will verify the document and within the next 48 working hours you will receive the a link to download the dataset. 
 
 
 Our challenge use the two stack (.csv submission and algorithm submission)                                                     
 
-For the premilary phase you need to submit your .csv prediction of the validation set
+- For the premilary phase you need to submit your .csv prediction of the validation set
+
+- For the final phase would required all succeful team to submit a container of their code to the the same adress. Using the as subject "Container solution [Team_name]". More details will be disclose later on. 
+
+🎯 Note that only teams (or single participant) with a valid submission for both tasks will be considered for final ranking and thus the rewards.
 
 
 
