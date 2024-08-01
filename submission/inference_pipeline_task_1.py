@@ -260,14 +260,22 @@ class InferenceTask1:
         
         ## You can test as much inference pipeline you which
         # in your local machine. You will have to select
-        # two shot to for the final submission.
+        # two shot to for the final submission. 
+        # The inference should always return a list of batch containing label,prediction,cases 
+        # The method run should always return the scores
         
         if use_tta:
             y_true, y_pred, cases = self.simple_test_time_inference(data_loader, n_augmentations)
         elif use_ensemble:
             y_true, y_pred, cases = self.simple_ensemble_inference(data_loader)
+        
+        #### elif:
+            # Any custom inference that you want to apply
+        
         else:
             y_true, y_pred, cases = self.simple_inference(data_loader)
+            
+            
 
 
         # DO NOT EDIT THIS PART
