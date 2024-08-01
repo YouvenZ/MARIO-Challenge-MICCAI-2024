@@ -83,4 +83,4 @@ Once your test is successful, zip your submission folder and send it via the Goo
 - **Docker Build Errors**: Ensure your `requirements.txt` is correctly formatted and that all dependencies are available.
 - **File Not Found**: Ensure the file paths in your scripts match the mounted volumes.
 - **Permission Issues**: Run Docker commands with appropriate permissions (use `sudo` if necessary).
-- If you have questions of need help do not hesitate to contact me at rachid.zeghlache@univ-brest.fr 
+- If you have questions or need help do not hesitate to contact me at rachid.zeghlache@univ-brest.fr 
