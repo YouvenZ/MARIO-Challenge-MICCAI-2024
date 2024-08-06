@@ -112,26 +112,27 @@ class InferenceTask1:
                 y_true.append(label)
                 cases.append(case_id)
         return y_true, y_pred, cases
-
+    
+    
+    
     def scoring(self, y_true, y_pred):
         """
         DO NOT EDIT THIS CODE
-
-        Calculates F1 score, Matthews Correlation Coefficient, and Specificity for a classification task.
+        Calculates various scoring metrics.
 
         Args:
             y_true (list): True labels.
             y_pred (list): Predicted labels.
 
         Returns:
-            dict: Dictionary containing F1 score, Matthews Correlation Coefficient, Specificity, and Quadratic-weighted Kappa metrics.
+            dict: Dictionary containing various scores.
         """
         return {
             "F1_score": f1_score(y_true, y_pred, average="micro"),
             "Rk-correlation": matthews_corrcoef(y_true, y_pred),
             "Specificity": specificity(y_true, y_pred),
-            "Quadratic-weighted_Kappa": cohen_kappa_score(y_true, y_pred, weights="quadratic")
         }
+    
 
     def test_time_augmentation(self, input_tensor, n_augmentations=5):
         """
@@ -307,7 +308,7 @@ inference_task1 = InferenceTask1(model_paths, model_names, model_weights_contrib
 
 
 scores_1 = inference_task1.run(data_loader, use_tta=True, n_augmentations=5)
-print(f"Obtained scores for inference method 1: F1_score: {scores_1['F1_score']}, Rk-correlation: {scores_1['Rk-correlation']}, Specificity: {scores_1['Specificity']}, Quadratic-weighted_Kappa: {scores_1['Quadratic-weighted_Kappa']}")
+print(f"Obtained scores for inference method 1: F1_score: {scores_1['F1_score']}, Rk-correlation: {scores_1['Rk-correlation']}, Specificity: {scores_1['Specificity']}")
 
 scores_2 = inference_task1.run(data_loader,use_ensemble = True, use_tta=False)
-print(f"Obtained scores for inference method 2: F1_score: {scores_2['F1_score']}, Rk-correlation: {scores_2['Rk-correlation']}, Specificity: {scores_2['Specificity']}, Quadratic-weighted_Kappa: {scores_2['Quadratic-weighted_Kappa']}")
+print(f"Obtained scores for inference method 2: F1_score: {scores_2['F1_score']}, Rk-correlation: {scores_2['Rk-correlation']}, Specificity: {scores_2['Specificity']}")

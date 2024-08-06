@@ -6,7 +6,7 @@ from models.example_model_task2 import SimpleModel2
 from models.example_model_task2 import SimpleModel2
 from models.example_model_task2v2 import SimpleModel2v2
 from utils.scoring import specificity
-from sklearn.metrics import matthews_corrcoef, f1_score
+from sklearn.metrics import matthews_corrcoef, f1_score, cohen_kappa_score
 import os
 import pandas as pd
 from tqdm import tqdm
@@ -115,20 +115,23 @@ class InferenceTask2:
     def scoring(self, y_true, y_pred):
         """
         DO NOT EDIT THIS CODE
-        Calculates various scoring metrics.
+
+        Calculates F1 score, Matthews Correlation Coefficient, and Specificity for a classification task.
 
         Args:
             y_true (list): True labels.
             y_pred (list): Predicted labels.
 
         Returns:
-            dict: Dictionary containing various scores.
+            dict: Dictionary containing F1 score, Matthews Correlation Coefficient, Specificity, and Quadratic-weighted Kappa metrics.
         """
         return {
             "F1_score": f1_score(y_true, y_pred, average="micro"),
             "Rk-correlation": matthews_corrcoef(y_true, y_pred),
             "Specificity": specificity(y_true, y_pred),
+            "Quadratic-weighted_Kappa": cohen_kappa_score(y_true, y_pred, weights="quadratic")
         }
+
     def simple_ensemble_inference(self, data_loader):
         """
         Performs inference using model ensembling and test time augmentation.
@@ -289,7 +292,7 @@ model_weights_contribution = [0.6, 0.4]  # Example weights for the models
 inference_task2 = InferenceTask2(model_paths, model_names, model_weights_contribution)
 
 scores_1 = inference_task2.run(data_loader, use_tta=True, n_augmentations=5)
-print(f" Obtained scores for inference method 1: F1_score: {scores_1['F1_score']}, Rk-correlation: {scores_1['Rk-correlation']}, Specificity: {scores_1['Specificity']}")
+print(f" Obtained scores for inference method 1: F1_score: {scores_1['F1_score']}, Rk-correlation: {scores_1['Rk-correlation']}, Specificity: {scores_1['Specificity']}, Quadratic-weighted_Kappa: {scores_1['Quadratic-weighted_Kappa']}")
 
 scores_2 = inference_task2.run(data_loader,use_ensemble = True, use_tta=False)
-print(f" Obtained scores for inference method 2: F1_score: {scores_2['F1_score']}, Rk-correlation: {scores_2['Rk-correlation']}, Specificity: {scores_2['Specificity']}")
+print(f" Obtained scores for inference method 2: F1_score: {scores_2['F1_score']}, Rk-correlation: {scores_2['Rk-correlation']}, Specificity: {scores_2['Specificity']}, Quadratic-weighted_Kappa: {scores_2['Quadratic-weighted_Kappa']}")
