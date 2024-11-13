@@ -1,8 +1,4 @@
-Here's a more general README to guide participants in filling out the document:
-
----
-
-# README: General Guide for Completing the Submission Template
+# README: General Guide for Completing the Submission Template for the MARIO challenge 🕹️ 🍄
 
 This README provides instructions for filling out the submission template. Please read each section carefully to ensure the document is completed accurately.
 
@@ -44,11 +40,5 @@ This README provides instructions for filling out the submission template. Pleas
      - **Code Link:** If you have a GitHub repository with your code, include the link in this section if not already provided.
 
 ---
-
-## General Tips
-
-- **Formatting:** Use LaTeX commands where needed for special formatting, equations, or terms.
-- **Clarity:** Aim to be concise but clear, focusing on methods, tools, and choices most critical to your solution.
-- **Completeness:** Ensure each required field is filled in, and check for consistency between sections.
 
 Thank you for following these instructions to complete the submission template!
