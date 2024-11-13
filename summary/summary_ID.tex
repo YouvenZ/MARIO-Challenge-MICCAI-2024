@@ -1,0 +1,118 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb, array, booktabs, xcolor, geometry, caption, url}
+\usepackage{graphicx}
+
+\geometry{margin=1in}
+\setlength{\arrayrulewidth}{0.5mm}
+\setlength{\tabcolsep}{5pt}
+\renewcommand{\arraystretch}{1.3}
+
+\title{\textbf{Team Template Submission}}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section*{Instructions}
+Please complete the following tables with information relevant to your team and submission. Follow the instructions provided for each section carefully to ensure compliance with submission guidelines.
+
+\section{Team and Participant Information}
+\noindent\textbf{Instructions:} Provide details about your team. Teams ranked in the top 6 can list up to 5 contributors; all other teams may list up to 3 contributors.
+
+\begin{table}[h!]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|l|l|l|l|}
+\hline
+\textbf{Team Name} & \textbf{Contributor Names (max. 5/3)} & \textbf{Institution} & \textbf{GitHub Link} \\
+\hline
+YouvenZ & Rachid Zeghlache$^{1}$, Ikram Brahim$^{1,2}$, Gwenolé Quellec $^{1}$ & LaTIM UMR 1101$^{1}$, CHU Brest$^{2}$ & \url{https://github.com/YouvenZ/MARIO-Challenge-MICCAI-2024} \\
+\hline
+\end{tabular}%
+}
+\end{table}
+
+\section{Task 1: Method Summary}
+\noindent\textbf{Instructions:} Provide a summary of the methods used for Task 1, including preprocessing, model architecture, and other relevant information.
+
+\begin{table}[h!]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline
+\textbf{Preprocessing} & \textbf{Encoder} & \textbf{Loss Function} & \textbf{Post-processing} & \textbf{Data Augmentation} & \textbf{Inference Time (GPU)} & \textbf{Model Params} & \textbf{Framework} \\
+\hline
+ crop, resize, normalization & ResNet50 & BCE & Ensembling & Rotation, Zoom & 7m 6s & 100M & PyTorch \\
+\hline
+\end{tabular}%
+}
+\end{table}
+
+\section{Task 1: Methodology Components}
+\noindent\textbf{Instructions:} Indicate whether specific components were used in Task 1. For each "Yes" answer, provide the name of the component, in case you did not use the component respond by "N".
+
+\begin{table}[h!]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Pretext Task (Y/N + Name)} & \textbf{Foundation Model (Y/N + Name)} & \textbf{Multi-modal Learning (Y/N + Name)} & \textbf{Public Dataset (Y/N + Name)} \\
+\hline
+Y / Masked Autoencoder & Y / CLIP & Y / Cross-attention Fusion & N \\
+\hline
+\end{tabular}%
+}
+\end{table}
+\section{Task 2: Method Summary}
+\noindent\textbf{Instructions:} Provide a summary of the methods used for Task 2, including preprocessing, model architecture, and other relevant information.
+
+\begin{table}[h!]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline
+ \textbf{Preprocessing} & \textbf{Encoder} & \textbf{Loss Function} & \textbf{Post-processing} & \textbf{Data Augmentation} & \textbf{Inference Time (GPU)} & \textbf{Model Params} & \textbf{Framework} \\
+\hline
+ resize, histogram matching & DenseNet121 & Focal Loss & Majority Voting & Brightness Shift & 5m 46s & 50M & Keras \\
+\hline
+\end{tabular}%
+}
+\end{table}
+
+\section{Task 2: Methodology Components}
+\noindent\textbf{Instructions:} Indicate whether specific components were used in Task 2. For each "Yes" answer, provide the name of the component, in case you did not use the component respond by "N".
+
+\begin{table}[h!]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Pretext Task (Y/N + Name)} & \textbf{Foundation Model (Y/N + Name)} & \textbf{Multi-modal Learning (Y/N + Name)} & \textbf{Public Dataset (Y/N + Name)} \\
+\hline
+ Y / SimCLR & N & Y / Multi-modal Fusion & N \\
+\hline
+\end{tabular}%
+}
+\end{table}
+
+\section{Team Approach Summaries}
+
+(Methodology, architecture details, preprocessing, and data augmentation strategies, and other specific modules developed.)
+
+\subsection{YouvenZ - Example Team Summary}
+
+\textbf{Task 1:}
+
+The YouvenZ team designed a robust neural network model, RetinaTrackNet, tailored for identifying progression changes in retinal OCT scans over time. The preprocessing pipeline included intensity normalization, resizing each B-scan to 256x256 pixels, and anatomical alignment across scans to ensure consistency. To counter class imbalance, they employed SMOTE (Synthetic Minority Over-sampling Technique) on the training set and supplemented it with targeted data augmentation, applying transformations such as RandomRotation, GaussianNoise, and RandomRescale, aiming to generate realistic variations in retinal structures.
+RetinaTrackNet’s architecture was based on a ResNet-50 backbone integrated with a temporal convolutional network (TCN) layer to capture sequential changes between scan pairs. Additionally, a self-attention mechanism was applied to highlight critical areas in each scan, improving model focus on disease-relevant features. The training procedure involved fine-tuning a pre-trained ResNet-50 model with an Adam optimizer and a cyclic learning rate schedule to maximize convergence stability. Post-processing involved a probabilistic thresholding method, assigning higher confidence scores to high-probability predictions, which helped reduce false positives. The team noted strong performance with an increased F1-score, attributing this to the self-attention layer and dynamic data augmentation.
+
+
+\textbf{Task 2:} 
+
+For Task 2, YouvenZ introduced ProgressionForecaster, a hybrid model aimed at predicting AMD progression within a three-month window. Preprocessing steps were similar to Task 1, but additional care was taken to ensure data consistency by performing histogram matching across datasets from different devices. This task also required addressing a significant class imbalance; the team tackled this with class-weighted focal loss during training, which emphasized the minority classes.
+ProgressionForecaster’s architecture consisted of a DenseNet-121 backbone coupled with a Long Short-Term Memory (LSTM) network to model temporal dependencies. To handle the ordinal nature of the progression labels, the team utilized a custom loss function based on the Earth Mover’s Distance (EMD), which helped capture the gradation between classes. Data augmentation involved transformations like brightness shifts, GaussianBlur, and RandomAffine, applied specifically to minority classes to boost model robustness without overfitting. Post-processing incorporated a majority voting scheme across the B-scans within each OCT volume, ensuring volume-level consistency in predictions.
+The training process used a mix of the AdamW optimizer and cosine annealing for learning rate decay, with dropout layers incorporated within the LSTM to improve generalization. This approach achieved promising results, particularly for minority class predictions, although the team highlighted the need for further refinement in multi-class predictions. The code for the team’s solution is available at https://github.com/YouvenZ/MARIO-Challenge-MICCAI-2024.
+
+\end{document}
+
