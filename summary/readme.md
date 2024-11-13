@@ -22,7 +22,7 @@ This README provides instructions for filling out the submission template. Pleas
    - **Objective:** Identify whether specific components were used in Task 1.
    - **Instructions:**
      - For each item (e.g., **Pretext Task**, **Foundation Model**), indicate "Y" for Yes or "N" for No.
-     - If the item was used, include the specific component name (e.g., "Y / Masked Autoencoder"). If it was not used, simply indicate "N."
+     - If the item was used, include the specific component name (e.g., "Y - Masked Autoencoder") please make sure to use '-' after the Y to answer. If it was not used, simply indicate "N."
 
 ### 4. **Task 2: Method Summary**
    - **Objective:** Summarize the core methods used for Task 2.
