@@ -1,61 +1,76 @@
-Of course, here is a visually improved version of your README file with the added citation information.
-
 # 🕹️ 🍄 MARIO: Monitoring AMD Progression in OCT
+
+[![arXiv](https://img.shields.io/badge/arXiv-2506.02976-b31b1b.svg)](https://arxiv.org/abs/2506.02976)
+[![Dataset](https://img.shields.io/badge/Dataset-Zenodo-blue)](https://zenodo.org/records/15270469)
+[![MICCAI 2024](https://img.shields.io/badge/MICCAI-2024-green)](https://youvenz.github.io/MARIO_challenge.github.io/)
+
+<p align="center">
+  <img src="https://github.com/YouvenZ/MARIO-Challenge-MICCAI-2024/blob/main/images/mario_banner_.png" alt="MARIO Challenge Banner" width="800">
+</p>
+
+## 📋 Overview
+
+This is the official repository for the MARIO (Monitoring AMD progression in OCT) Challenge. Here you'll find guidance on how to participate and submit your solutions to Codabench.
 
 **[Challenge Website](https://youvenz.github.io/MARIO_challenge.github.io/)**
 
------
+### Resources Provided:
 
-## 📝 About the Challenge
+- Evaluation scripts
+- Docker example for final phase submissions
+- Access to the [dataset on Zenodo](https://zenodo.org/records/15270469)
 
-Welcome to the official GitHub repository for the **MARIO Challenge**\! This page provides all the necessary information and resources to help you successfully participate and submit your solution to Codabench.
+---
 
-Here, you will find:
+## 🎯 Challenge Tasks
 
-  * The evaluation script we use.
-  * A Docker example for your final phase submission.
+### Task 1: Comparative Analysis
 
------
+<p align="center">
+  <img src="https://github.com/YouvenZ/MARIO-Challenge-MICCAI-2024/blob/main/images/mario_task_1_gray_bg.png" alt="Task 1" width="700">
+</p>
 
-## 🎯 Tasks
+The first task focuses on pairs of 2D slices (B-scans) from two consecutive OCT acquisitions. The goal is to classify the evolution between these two slices (before and after), which clinicians typically examine side by side on their screens.
 
-### **Task 1: Pair-wise B-scan Classification**
+### Task 2: Future Progression Prediction
 
-This task focuses on analyzing pairs of 2D slices (B-scans) from two consecutive OCT acquisitions. Your goal is to classify the evolution between these two slices (before and after), mimicking how clinicians examine them side-by-side.
+<p align="center">
+  <img src="https://github.com/YouvenZ/MARIO-Challenge-MICCAI-2024/blob/main/images/mario_task_2_gray_bg.png" alt="Task 2" width="700">
+</p>
 
-### **Task 2: Future Evolution Prediction**
+The second task operates at the 2D slice level. The goal is to predict the future evolution within 3 months for patients enrolled in anti-VEGF treatment plans. While Task 1 aims to automate the initial analysis step (decision support), Task 2 aims to automate the complete analysis process (autonomous AI).
 
-This task challenges you to predict the future evolution of 2D slices within a 3-month timeframe for patients undergoing anti-VEGF treatment. This task aims to automate the entire analysis process, paving the way for autonomous AI in clinical decision-making.
+> 🔔 **Note**: Only teams with valid submissions for both tasks will be considered for final ranking and rewards.
 
------
+---
 
-## 🚀 Submission Instructions
+## 📝 Participation Guide
 
-### **How to Register**
+### How to Register
 
-### **Accessing the Data**
+<p align="center">
+  <img src="https://github.com/YouvenZ/MARIO-Challenge-MICCAI-2024/blob/main/images/tuto_register.png" alt="Registration Tutorial">
+</p>
 
-1.  **Create a Codabench Account:** If you don't have one, [sign up here](https://www.codabench.org/accounts/signup).
-2.  **Complete the Participation Form:** Download the [form here](https://github.com/YouvenZ/MARIO-Challenge-MICCAI-2024/blob/main/MARIO%202024%20Data%20Challenge%20Participation%20Form.pdf), fill it out, and email it to `rachid.zeghlache@univ-brest.fr`.
-      * **Email Subject:** "MARIO 2024 Challenge"
-      * **File Name:** `MARIO 2024 Data Challenge Participation Form_team_name.pdf`
-3.  **Receive the Data:** Once we verify your submission (within 48 working hours), we will send you a link to download the dataset.
+### Accessing the Dataset
 
-### **Submission Phases**
+1. Create a [CodaBench account](https://www.codabench.org/accounts/signup) if you don't have one
+2. Download and complete the [participation form](https://github.com/YouvenZ/MARIO-Challenge-MICCAI-2024/blob/main/MARIO%202024%20Data%20Challenge%20Participation%20Form.pdf)
+3. Send the form to rachid.zeghlache@univ-brest.fr with "MARIO 2024 Challenge" in the subject
+4. Name your form as "MARIO 2024 Data Challenge Participation Form_team_name.pdf"
+5. Once verified, you'll receive a download link within 48 working hours
+6. Alternatively, access the [public dataset on Zenodo](https://zenodo.org/records/15270469)
 
-Our challenge has two submission phases:
+### Submission Process
 
-  * **Preliminary Phase:** Submit your `.csv` predictions for the validation set.
-  * **Final Phase:** Successful teams must submit a container of their code to the same email address.
-      * **Email Subject:** "Container solution [Team\_name]"
+- **Preliminary Phase**: Submit your CSV predictions for the validation set
+- **Final Phase**: Submit a container of your code to the same address with subject "Container solution [Team_name]"
 
-> **🎯 Important:** Only participants with valid submissions for both tasks will be considered for the final ranking and rewards.
+---
 
------
+## 📚 Citation
 
-## 📜 Citation
-
-If you use this work, please cite the following paper:
+If you use the MARIO challenge dataset or reference our work, please cite:
 
 ```bibtex
 @misc{zeghlache2025deeplearningretinaldegeneration,
@@ -67,4 +82,3 @@ If you use this work, please cite the following paper:
       primaryClass={cs.CV},
       url={https://arxiv.org/abs/2506.02976}, 
 }
-```
