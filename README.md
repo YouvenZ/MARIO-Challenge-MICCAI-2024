@@ -1,57 +1,70 @@
-# 🕹️ 🍄 MARIO : Monitoring AMD progression in OCT
+Of course, here is a visually improved version of your README file with the added citation information.
 
-![](https://github.com/YouvenZ/MARIO-Challenge-MICCAI-2024/blob/main/images/mario_banner_.png)
+# 🕹️ 🍄 MARIO: Monitoring AMD Progression in OCT
 
+**[Challenge Website](https://youvenz.github.io/MARIO_challenge.github.io/)**
 
-[Challenge website](https://youvenz.github.io/MARIO_challenge.github.io/)
+-----
 
-## Context
+## 📝 About the Challenge
 
-This is the github page of the MARIO challenge. This page aims to provide guidance of how to publish your solution to codabench.
+Welcome to the official GitHub repository for the **MARIO Challenge**\! This page provides all the necessary information and resources to help you successfully participate and submit your solution to Codabench.
 
-We provide the following information
+Here, you will find:
 
-- The script we used for the evaluation
-- A docker exemple for the submission for final phase 
+  * The evaluation script we use.
+  * A Docker example for your final phase submission.
 
----
+-----
 
+## 🎯 Tasks
 
-## Tasks
+### **Task 1: Pair-wise B-scan Classification**
 
-### Task 1 
+This task focuses on analyzing pairs of 2D slices (B-scans) from two consecutive OCT acquisitions. Your goal is to classify the evolution between these two slices (before and after), mimicking how clinicians examine them side-by-side.
 
-The first task focuses on pairs of 2D slices (B-scans) from two consecutive OCT acquisitions. The goal is to classify the evolution between these two slices (before and after), which clinicians typically examine side by side on their screens.
+### **Task 2: Future Evolution Prediction**
 
-![](https://github.com/YouvenZ/MARIO-Challenge-MICCAI-2024/blob/main/images/mario_task_1_gray_bg.png)
+This task challenges you to predict the future evolution of 2D slices within a 3-month timeframe for patients undergoing anti-VEGF treatment. This task aims to automate the entire analysis process, paving the way for autonomous AI in clinical decision-making.
 
-### Task 2
+-----
 
-The second task focuses on 2D slices level. The goal is to predict the future evolution within 3 months with close monitoring of patients that are enrolled in an anti-VEGF treatments plan. In summary, the first task aims to automate the initial step of the analysis (useful for decision support) and the second task aims to automate the complete analysis process (useful for autonomous AI).
+## 🚀 Submission Instructions
 
-![](https://github.com/YouvenZ/MARIO-Challenge-MICCAI-2024/blob/main/images/mario_task_2_gray_bg.png)
+### **How to Register**
 
+### **Accessing the Data**
 
-## Submission instruction
+1.  **Create a Codabench Account:** If you don't have one, [sign up here](https://www.codabench.org/accounts/signup).
+2.  **Complete the Participation Form:** Download the [form here](https://github.com/YouvenZ/MARIO-Challenge-MICCAI-2024/blob/main/MARIO%202024%20Data%20Challenge%20Participation%20Form.pdf), fill it out, and email it to `rachid.zeghlache@univ-brest.fr`.
+      * **Email Subject:** "MARIO 2024 Challenge"
+      * **File Name:** `MARIO 2024 Data Challenge Participation Form_team_name.pdf`
+3.  **Receive the Data:** Once we verify your submission (within 48 working hours), we will send you a link to download the dataset.
 
-### How to register to the challenges
+### **Submission Phases**
 
-![](https://github.com/YouvenZ/MARIO-Challenge-MICCAI-2024/blob/main/images/tuto_register.png)
+Our challenge has two submission phases:
 
-### How to have acces to the data ?
+  * **Preliminary Phase:** Submit your `.csv` predictions for the validation set.
+  * **Final Phase:** Successful teams must submit a container of their code to the same email address.
+      * **Email Subject:** "Container solution [Team\_name]"
 
-First if you do not have a CodaBench account yet, create one [here](https://www.codabench.org/accounts/signup): 
+> **🎯 Important:** Only participants with valid submissions for both tasks will be considered for the final ranking and rewards.
 
-Second fill the following [form](https://github.com/YouvenZ/MARIO-Challenge-MICCAI-2024/blob/main/MARIO%202024%20Data%20Challenge%20Participation%20Form.pdf), fill the form and send it to rachid.zeghlache@univ-brest.fr. Also please make sure to add "MARIO 2024 Challenge" in the subject of your mail in order to faciliate the. Finally add the your Team name for naming form (i.e  MARIO 2024 Data Challenge Participation Form_team_name.pdf). Once completed and signed, we will verify the document and within the next 48 working hours you will receive the a link to download the dataset. 
+-----
 
+## 📜 Citation
 
-Our challenge use the two stack (.csv submission and algorithm submission)                                                     
+If you use this work, please cite the following paper:
 
-- For the premilary phase you need to submit your .csv prediction of the validation set
-
-- For the final phase would required all succeful team to submit a container of their code to the the same adress. Using the as subject "Container solution [Team_name]". More details will be disclose later on. 
-
-🎯 Note that only teams (or single participant) with a valid submission for both tasks will be considered for final ranking and thus the rewards.
-
-
-
+```bibtex
+@misc{zeghlache2025deeplearningretinaldegeneration,
+      title={Deep Learning for Retinal Degeneration Assessment: A Comprehensive Analysis of the MARIO AMD Progression Challenge}, 
+      author={Rachid Zeghlache and Ikram Brahim and Pierre-Henri Conze and Mathieu Lamard and Mohammed El Amine Lazouni and Zineb Aziza Elaouaber and Leila Ryma Lazouni and Christopher Nielsen and Ahmad O. Ahsan and Matthias Wilms and Nils D. Forkert and Lovre Antonio Budimir and Ivana Matovinović and Donik Vršnak and Sven Lončarić and Philippe Zhang and Weili Jiang and Yihao Li and Yiding Hao and Markus Frohmann and Patrick Binder and Marcel Huber and Taha Emre and Teresa Finisterra Araújo and Marzieh Oghbaie and Hrvoje Bogunović and Amerens A. Bekkers and Nina M. van Liebergen and Hugo J. Kuijf and Abdul Qayyum and Moona Mazher and Steven A. Niederer and Alberto J. Beltrán-Carrero and Juan J. Gómez-Valverde and Javier Torresano-Rodríquez and Álvaro Caballero-Sastre and María J. Ledesma Carbayo and Yosuke Yamagishi and Yi Ding and Robin Peretzke and Alexandra Ertl and Maximilian Fischer and Jessica Kächele and Sofiane Zehar and Karim Boukli Hacene and Thomas Monfort and Béatrice Cochener and Mostafa El Habib Daho and Anas-Alexis Benyoussef and Gwenolé Quellec},
+      year={2025},
+      eprint={2506.02976},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2506.02976}, 
+}
+```
